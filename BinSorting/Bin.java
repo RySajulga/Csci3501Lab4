@@ -15,8 +15,11 @@ public class Bin {
 
     }
 
+    // When inserting something, it just checks that it is possible so the 
+    // Total value of the Bin doesn't exceed the maximum amount
+    // This could be removed? Since we check this already before actually inserting
     public boolean insert(int number) {
-        if (total + number < maxTotal){
+        if (total + number <= maxTotal){
             items[currPos] = number;
             currPos++;
             total = total + number;
@@ -24,5 +27,4 @@ public class Bin {
         }
         return false;
     }
-    
 }

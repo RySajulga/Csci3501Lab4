@@ -16,24 +16,24 @@ public class BinPack{
         for (int i = 0; i < numItems; i++) {
             numArray[i] = numbers.nextInt();
         }
-        //System.out.println(Arrays.toString(numArray));
+        numbers.close();
 
         Bin[] bins = new Bin[3];
         bins[0] = new Bin(numArray.length, binSize);
         bins[1] = new Bin(numArray.length, binSize);
         bins[2] = new Bin(numArray.length, binSize);
 
-        for (int number : numArray) {
-            int index = 0;
+        int overflow = 0;
 
-            for (Bin bin : bins) {
-                if(bin.total + number > binSize){
-                    index++;
+        for (int number : numArray) {
+            for (int i = 0; i < bins.length; i++) {
+                if(bins[i].total + number <= binSize){
+                    bins[i].insert(number);
                     break;
+                } else if(i == bins.length - 1){
+                    overflow = overflow + number;
                 }
             }
-
-            bins[index].insert(number);
         }
 
         int stringIndex = 1;
@@ -41,13 +41,17 @@ public class BinPack{
             System.out.println("bin " + stringIndex + ": " + Arrays.toString(bin.items));
             stringIndex++;
         }
+        System.out.println("Overflow: " + overflow);
 
     }
 
     public static void main(String[] args) {
-        String seriesOfNumbers = "1 2 3 4 5 6 7 5";
-
+        String seriesOfNumbers = "20 20 20";
         BinPack salmon = new BinPack();
-        salmon.binOrganizer(20, 8, seriesOfNumbers);
+        salmon.binOrganizer(20, 3, seriesOfNumbers);
+
+        // Example for a system input to output
+        //Scanner potato = new Scanner(System.in);
+        //System.out.println(potato.nextInt());
     }
 }
