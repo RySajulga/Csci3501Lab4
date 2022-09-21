@@ -3,7 +3,7 @@
 
 ## Successful examples:
 
-1.
+1. Example One
 - [10, 9, 8, 7 ,6 ,5 ,4, 3, 2, 1]
 - Bin Size: 20
 - Number of Items: 10
@@ -24,7 +24,10 @@ Overflow: 0
 
 When the list happens to be in descending order, the algorithm works better.
 
-2. 
+2. Example two
+- [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5]
+- Bin Size: 20
+- Number of Items: 12
 
 --------------Bin 1----------------
 Items: [5, 5, 5, 5, 0, 0, 0, 0, 0, 0, 0, 0]
