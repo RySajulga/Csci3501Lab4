@@ -37,15 +37,17 @@ public class BinPack{
         // This is just so we can see the output of the bins.
         int stringIndex = 1;
         for (Bin bin : bins) {
-            System.out.println("bin " + stringIndex + ": " + Arrays.toString(bin.items));
+            System.out.println("--------------Bin " + stringIndex + "----------------");
+            System.out.println("Items: " + Arrays.toString(bin.items));
+            System.out.println("Unused Space: " + (bin.maxTotal - bin.total) + "\n");
             stringIndex++;
         }
+
         // This is so we can see how much overflow we got.
         System.out.println("Overflow: " + overflow);
         // * It might be more useful to make this an array.
 
         // Note: Moving forward we should make this output percentages used for each bin.
-
     }
 
     public static void main(String[] args) {

@@ -3,7 +3,7 @@ package BinSorting;
 public class Bin {
 
     public int total = 0; // All the elements values combined
-    private int maxTotal;
+    public int maxTotal;
 
     private int size; // number of elements
     public int[] items;
