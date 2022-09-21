@@ -37,7 +37,7 @@ public class BinPack{
         // This is just so we can see the output of the bins.
         int stringIndex = 1;
         for (Bin bin : bins) {
-            System.out.println("--------------Bin " + stringIndex + "----------------");
+            System.out.println("--------------Bin " + stringIndex + "----------------" + "\n");
             System.out.println("Items: " + Arrays.toString(bin.items));
             System.out.println("Unused Space: " + (bin.maxTotal - bin.total) + "\n");
             stringIndex++;

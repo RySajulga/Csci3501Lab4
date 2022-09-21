@@ -9,14 +9,17 @@
 - Number of Items: 10
 
 --------------Bin 1----------------
+
 Items: [10, 9, 1, 0, 0, 0, 0, 0, 0, 0]
 Unused Space: 0
 
 --------------Bin 2----------------
+
 Items: [8, 7, 5, 0, 0, 0, 0, 0, 0, 0]
 Unused Space: 0
 
 --------------Bin 3----------------
+
 Items: [6, 4, 3, 2, 0, 0, 0, 0, 0, 0]
 Unused Space: 5
 
@@ -30,14 +33,17 @@ When the list happens to be in descending order, the algorithm works better.
 - Number of Items: 12
 
 --------------Bin 1----------------
+
 Items: [5, 5, 5, 5, 0, 0, 0, 0, 0, 0, 0, 0]
 Unused Space: 0
 
 --------------Bin 2----------------
+
 Items: [5, 5, 5, 5, 0, 0, 0, 0, 0, 0, 0, 0]
 Unused Space: 0
 
 --------------Bin 3----------------
+
 Items: [5, 5, 5, 5, 0, 0, 0, 0, 0, 0, 0, 0]
 Unused Space: 0
 
